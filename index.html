@@ -12,7 +12,7 @@
         <header class="page-heading">
             <span class="eyebrow">YOUR OWN PERSONALISED</span>
             <h1>TODO List<span>.</span></h1>
-            <p>Add a task, check it off, or double-click its name to make an edit.</p>
+            <p>Add tasks, keep track of progress, and make room for what matters.</p>
         </header>
 
         <section class="task-panel" aria-labelledby="task-heading">
@@ -30,11 +30,17 @@
                 <button id="add-btn" type="button">Add task <span aria-hidden="true">+</span></button>
             </div>
 
+            <div class="selection-bar" id="selection-bar" aria-live="polite" hidden>
+                <span id="selection-count">0 tasks selected</span>
+                <button id="delete-selected-btn" type="button">Delete selected</button>
+            </div>
+
             <ul id="todo-list" aria-label="Your tasks" aria-live="polite"></ul>
-            <p class="footnote" id="task-help">Double-click any task to edit it.</p>
+            <p class="footnote" id="task-help">Use the edit button to update a task. Select tasks to delete them together.</p>
         </section>
         <footer class="page-footer">MAKE ROOM FOR WHAT MATTERS</footer>
     </main>
     <script src="script.js"></script>
 </body>
 </html>
+
