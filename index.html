@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple, thoughtful space to keep track of your tasks.">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="workspace">
+        <header class="page-heading">
+            <span class="eyebrow">YOUR OWN PERSONALISED</span>
+            <h1>TODO List<span>.</span></h1>
+            <p>Add a task, check it off, or double-click its name to make an edit.</p>
+        </header>
+
+        <section class="task-panel" aria-labelledby="task-heading">
+            <div class="panel-heading">
+                <div>
+                    <span class="section-label">YOUR LIST</span>
+                    <h2 id="task-heading">Things to do</h2>
+                </div>
+                <span class="panel-mark">01 / TODAY</span>
+            </div>
+
+            <div class="entry-row">
+                <label class="visually-hidden" for="todo-input">New task</label>
+                <input type="text" id="todo-input" placeholder="Write down a task..." aria-describedby="task-help">
+                <button id="add-btn" type="button">Add task <span aria-hidden="true">+</span></button>
+            </div>
+
+            <ul id="todo-list" aria-label="Your tasks" aria-live="polite"></ul>
+            <p class="footnote" id="task-help">Double-click any task to edit it.</p>
+        </section>
+        <footer class="page-footer">MAKE ROOM FOR WHAT MATTERS</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
