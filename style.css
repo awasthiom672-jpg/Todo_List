@@ -183,11 +183,7 @@ h2 {
     font-size: 13px;
     line-height: 1.5;
     overflow-wrap: anywhere;
-    cursor: pointer;
-}
-
-#todo-list span:hover {
-    color: #bd6848;
+    cursor: default;
 }
 
 #todo-list li input[type='checkbox']:checked + span {
@@ -268,7 +264,7 @@ h2 {
 }
 
 
-/* Accessible labels and keyboard focus */
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -297,5 +293,90 @@ h2 {
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+
+.selection-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 42px;
+    margin-top: 12px;
+    padding: 8px 11px;
+    background: #f2f0e9;
+    border: 1px solid #e7e2d7;
+    border-radius: 3px;
+    color: #35413c;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.selection-bar[hidden] {
+    display: none;
+}
+
+#delete-selected-btn {
+    padding: 7px 11px;
+    border: 0;
+    border-radius: 3px;
+    background: #b84e43;
+    color: #fffefa;
+    font: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#delete-selected-btn:hover,
+#todo-list button.delete-btn:hover {
+    background: #963d35;
+    color: #fff;
+}
+
+#todo-list input.select-todo {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+    accent-color: #263b37;
+    cursor: pointer;
+}
+
+#todo-list button.edit-btn {
+    border-color: #202b2a;
+    background: #202b2a;
+    color: #fffefa;
+}
+
+#todo-list button.edit-btn:hover {
+    border-color: #394b46;
+    background: #394b46;
+    color: #fffefa;
+}
+
+#todo-list button.delete-btn {
+    border-color: #eadbd3;
+    background: transparent;
+    color: #b66b50;
+}
+
+#add-btn:focus-visible,
+#todo-list button:focus-visible,
+#todo-input:focus-visible,
+#search-input:focus-visible,
+#todo-list input[type='checkbox']:focus-visible,
+#delete-selected-btn:focus-visible {
+    outline: 2px solid #d66b45;
+    outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+    #todo-list li {
+        gap: 8px;
+    }
+
+    #todo-list button {
+        padding: 6px 7px;
     }
 }
